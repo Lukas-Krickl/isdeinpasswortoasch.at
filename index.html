@@ -17,13 +17,21 @@
     </head>
     <body>
         <main>
+            <div class="language-box">
+                <a href="https://lukas-krickl.github.io/isdeinpasswortoasch.at/"><img src="icons/at_flag.png" alt="Deutsch"></a>
+                <a href="https://lukas-krickl.github.io/doesyourpasswordsuck.com/"><img src="icons/en_flag.png" alt="English"></a>
+            </div>
             <section>
                 <h1>is dein passwort oasch .at</h1>
                 <nav>
+                    <div class="language-box-mobile">
+                        <a href=""><img src="icons/at_flag.png" alt="Deutsch"></a>
+                        <a href=""><img src="icons/en_flag.png" alt="English"></a>
+                    </div>
                     <button id="improvement_btn" onclick="paneControllerModule.showPane(paneControllerModule.panes.improvementPane);">
-                        Wie Passwörter sicher gestallten?</button>
+                        Passwörter sicher gestalten.</button>
                     <button id="what_we_test_btn" onclick="paneControllerModule.showPane(paneControllerModule.panes.what_we_test_pane);">
-                        Wie wir Ihr Passwort Testen.</button>
+                        Wie wir Ihr Passwort testen.</button>
                     <button id="seite_sicher_btn" onclick="paneControllerModule.showPane(paneControllerModule.panes.seiteSicherPane);">Ist diese Seite sicher?</button>
                     <button id="impressum_btn" onclick="paneControllerModule.showPane(paneControllerModule.panes.impressumPane);">Impressum</button>
                 </nav>
@@ -39,10 +47,10 @@
             <div>
                 <div>
                     <h3>Nutzungsbedingungen</h3>
-                    <p>Hiermit bestätige ich dass, dass ich diese <a onclick="paneControllerModule.showPane(paneControllerModule.panes.impressumPane);">
+                    <p>Hiermit bestätige ich, dass ich diese <a onclick="paneControllerModule.showPane(paneControllerModule.panes.impressumPane);">
                         Nutzungsbedingungen</a> gelesen und verstanden habe.</p>
                 </div>
-                <button class="btn field field-high" onclick="paneControllerModule.acceptTermsOfUse();">gelesen und verstanden.</button>
+                <button class="btn field field-high" onclick="paneControllerModule.acceptTermsOfUse();">Gelesen und verstanden.</button>
             </div>
         </div>
         <div class="full-screen-pane hidden" id="improvement_pane">
@@ -54,19 +62,19 @@
                     <ul>
                         <li>Mehrere Char-Sets (Zeichen Arten):
                             <ul>
-                                <li>Klein/Großbuchstaben</li>
+                                <li>Klein-/Großbuchstaben</li>
                                 <li>Zahlen</li>
                                 <li>Sonderzeichen</li>
                             </ul>
                         </li>
                         <li>Länge! Ein längeres einfaches Passwort ist stärker als ein kompliziertes kurzes Passwort.</li>
                         <li>Verwenden Sie keine Wörter, die in einem Wörterbuch stehen könnten.</li>
-                        <li>Verwenden Sie selbst erfundene Wörter/Dialekt/Slang um sich das Passwort leicht merken zu können, welches dann aber
+                        <li>Verwenden Sie selbst erfundene Wörter/Dialekt/Slang, um sich das Passwort leicht merken zu können, welches dann aber
                             dennoch sehr stark ist. z.B. "Fankunzerich", "Ruabnföd", "bims12neisespäswörd"</li>
                         <li>Keine Geburtsdaten oder Namen von Personen, Haustieren, Orten, Filmen, Serien, Musik</li>
-                        <li>Kein trivialer Zahlen/Buchstaben tausch wie z.B. 3 statt E oder 0 (null) statt O, sondern zufällige Zahlen an
+                        <li>Kein trivialer Zahlen-/Buchstaben tausch wie z.B. 3 statt E oder 0 (null) statt O, sondern zufällige Zahlen an
                                 zufälligen Positionen. Sie können z.B. zwei Würfel verwenden um zufällige Zahlen zu bekommen.</li>
-                        <li>Zufällige Position von Sonderzeichen und nicht am Anfang, Ende oder Zwischen Wörtern.</li>
+                        <li>Zufällige Position von Sonderzeichen und nicht am Anfang, Ende oder zwischen Wörtern.</li>
                     </ul>
                 </div>
                 <div class="pane mt-1">
@@ -75,7 +83,7 @@
                         <li>Verwenden Sie einen Passwort-Manager, wie z.B. <a href="https://keepass.info/" target="blank">KeyPass</a>.
                         Dieser speichert Ihre Passwörter verschlüsselt auf Ihrem PC.</li>
                         <li>Generieren Sie mit dem Passwort-Manager für jeden Account ein eigenes Passwort mit der maximal zulässigen Länge!</li>
-                        <li>Wählen Sie ein besonders starkes Master passwort um die Datenbank des Passwort-Managers zu entschlüsseln.
+                        <li>Wählen Sie ein besonders starkes Master-Passwort um die Datenbank des Passwort-Managers zu entschlüsseln.
                         </li>
                         <li>Ändern Sie Ihre Passwörter regelmäßig (alle 3-4 Jahre).</li>
                     </ol>
@@ -90,41 +98,40 @@
                     <h3>Ist diese Seite sicher?</h3>
                     
                     <p>
-                        Um Ihre Eingabe auf anfälligkeit des 2. Angriffes unter "Wie wir Ihr Passwort Testen." zu Prüfen senden wir sie als Ganzen und in Teilen zur Abfrage an folgendes online Wörterbuch über eine verschlüsselte Verbindung.
+                        Um Ihre Eingabe auf Anfälligkeit des 2. Angriffes unter "Wie wir Ihr Passwort testen." zu prüfen, senden wir sie als Ganzen und in Teilen zur Abfrage an folgendes online Wörterbuch über eine verschlüsselte Verbindung.
                         <a href="https://dictionaryapi.dev/" target="blank">https://dictionaryapi.dev/</a><br><br>
-                        Um Ihre Eingabe auf anfälligkeit des 3. Angriffes unter "Wie wir Ihr Passwort Testen." zu Prüfen senden wir sie
+                        Um Ihre Eingabe auf Anfälligkeit des 3. Angriffes unter "Wie wir Ihr Passwort testen." zu prüfen, senden wir sie
                             an eine API folgender Plattform über eine verschlüsselte Verbindung.
                         <a href="https://haveibeenpwned.com/" target="blank">https://haveibeenpwned.com/</a>
                         <hr>
                         Geben Sie auf KEINER anderen Webseite, als der zugehörigen und offiziellen Seite Ihrer Accounts Benutzername und/oder Passwort ein! Dies gilt auch für diese Seite.
                         <br><br>
-                        Sie könnten Ziel eines "Phishing Attack" werden. Mehr über "Phishing Attacks" und wie man sich gegen Sie wehrt erfahren Sie hier: 
+                        Sie könnten Ziel eines "Phishing Attack" werden. Mehr über "Phishing Attacks" und wie man sich gegen Sie wehrt, erfahren Sie hier: 
                         <a href="https://lukas-krickl.github.io/Phishing-Resistance" target="blank">Phishing Resistance</a>
                         <br><br>
                         Diese Seite verwendet "state of the art" Sicherheitsmechanismen, außerdem werden Ihre Eingaben nicht gespeichert. Sie können daher
-                        in eigenem Ermessen Passwörter eingeben.
+                        nach eigenem Ermessen Passwörter eingeben.
                         <br><br>
                     </p>
                     <strong>Geben Sie vorzugsweise Passwörter ein, die demselben Schema wie Ihr Echtes folgen:</strong>
                     <ul>
                         <li>Gleiche Länge</li>
                         <li>Gleiche Anzahl von Buchstaben, Zahlen, Sonderzeichen</li>
-                        <li>Gleiche Anzahl von Wörtern, Name</li>
+                        <li>Gleiche Anzahl von Wörtern, Namen</li>
                     </ul>
                 </div>
             </div>
         </div>
-        <!--  -->
         <div class="full-screen-pane hidden" id="what_we_test_pane">
             <div class="pane-wrapper">
                 <div class="full-screen-pane-content">
                     <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.what_we_test_pane);">
                         <img src="icons/clear-24px.svg" alt="X"></button>
-                    <h3>Wie wir Ihr Passwort Testen:</h3>
+                    <h3>Wie wir Ihr Passwort testen:</h3>
                     <ol>
                         <li>
-                            <strong>die Komplexität Ihres Passwortes.</strong><br>
-                            Resistenz gegen "bruteforce attacks".
+                            <strong>Komplexität Ihres Passwortes</strong><br>
+                            Resistenz gegen "bruteforce attacks"
                         </li>
                         <li>
                             <strong>ob Ihr Passwort Deutsche/Englische Wörter enthält</strong><br>
@@ -139,18 +146,18 @@
                     <hr>
                     <p>
                         <strong>Bruteforce Attacks:</strong><br>
-                        Passwörter erhalten ihre stärke durch ihre Komplexität. Komplexität bedeutet hier nicht, wie zufällig 
-                        und kompliziert es aussieht, sondern die Anzahl der Permutationen die durch die verwendeten "Character Sets"/Zeichenarten und der Länge erzeugt werden.
+                        Passwörter erhalten ihre Stärke durch ihre Komplexität. Komplexität bedeutet hier nicht, wie zufällig 
+                        und kompliziert es aussieht, sondern die Anzahl der Permutationen, die durch die verwendeten "Character Sets"/Zeichenarten und der Länge erzeugt werden.
                         <br><br>
-                        Die einfachste Methode eines Angreifers ist der "bruteforce attack", systematisches Ausprobieren von jeder Zeichenkombination.
-                        Dieser Angriff hat eine 100% Erfolgswahrscheinlichkeit da er jede mögliche Zeichenkombination/Permutation ausprobiert, bis unser Passwort gefunden wurde. Wehren kann man sich mit einer hohen Anzahl von Permutationen, sodass der Angriff lange dauert, und in dem man seine Passwörter regelmäßig ändert, bevor der Angriff abgeschlossen ist.                         
+                        Die einfachste Methode eines Angreifers ist der "bruteforce attack", ein systematisches Ausprobieren von jeder Zeichenkombination.
+                        Dieser Angriff hat eine 100% Erfolgswahrscheinlichkeit, da er jede mögliche Zeichenkombination/Permutation ausprobiert, bis unser Passwort gefunden wurde. Wehren kann man sich mit einer hohen Anzahl von Permutationen, sodass der Angriff lange dauert, und in dem man seine Passwörter regelmäßig ändert, bevor der Angriff abgeschlossen ist.                         
                     </p>
                     <hr>
                     <p>
                         <strong>Dictionary Attack:</strong><br>
-                        Ähnlich dem bruteforce attack nur probiert der Angreifer hier eine Kombination aus Wörtern eines Wörterbuches.
+                        Ähnlich einem "bruteforce attack", nur probiert der Angreifer hier eine Kombination aus Wörtern eines Wörterbuches.
                         Dieses Wörterbuch kann ein gewöhnliches Wöterbuch einer Sprache sein, aber auch eine Liste von häufig gewählten Passwörtern 
-                        oder sogar Passwörter die durch ein Datenleck veröffentlicht wurden. Verwenden Sie daher kein Passwort mehrmals.
+                        oder sogar Passwörter, die durch ein Datenleck veröffentlicht wurden. Verwenden Sie daher kein Passwort mehrmals.
                         
                     </p>   
                 </div>
@@ -174,13 +181,16 @@
                     </p>
                     <h4>Nutzungsbedingungen:</h4>
                     <p class="paragraph-block">
-                        In den Nutzungsbedingungen sind der Autor im folgenden mit "ich", diese Website mit "Web Applikation" und der Nutzer mit "Sie" bezeichnet.
-                        Diese Web Applikation wurde ausschließlich zu Lernzwecken bezüglich "serverless computing" und demonstration meiner Fertigkeiten als Software-engineer als Teil meines <a href="https://lukas-krickl.github.io" target="blank">Portfolios</a> entwickelt.<br><br> 
-                        Ich übernehme keinerlei Haftung für die eingegebenen Daten, deren Handhabung, inklussive Weiterleitung an dritte als Ganzes oder in Teilen,
-                        was für die technologische Funktionsweise erforderlich ist.  
-                        Des weiteren geben gebe ich keinerlei Garantie oder Gewährleistung bezüglich der Sicherheit von getesteten Passwörtern und Eingaben
-                        oder Korrektheit der angeführten Passwortsicherheit-spezifischen Information.
-                        Mit der Nutzung dieser Web Wpplikation bestätigen Sie, dass Sie die funktionsweise der Web Applikation, welche 
+                        In den Nutzungsbedingungen sind der Autor im Folgenden mit "ich", diese Website mit "Web Applikation" und der Nutzer mit "Sie" bezeichnet.
+                        Diese Web Applikation wurde ausschließlich zu Lernzwecken bezüglich "serverless computing" und zur Demonstration meiner Fertigkeiten als Software Engineer als Teil meines 
+                        <a href="https://lukas-krickl.github.io" target="blank">Portfolios</a> entwickelt.<br><br>
+                        Ich übernehme keinerlei Haftung für die eingegebenen Daten, deren Handhabung, inklusive Weiterleitung an Dritte als Ganzes oder in Teilen, oder 
+                        den daraus resultierenden Schaden.
+                        Des Weiteren geben gebe ich keinerlei Garantie oder Gewährleistung bezüglich der Sicherheit von getesteten Passwörtern und Eingaben
+                        oder Korrektheit der angeführten Passwortsicherheit-spezifischen Information. Das volle Risiko bezüglich Qualität und Leistungsfähigkeit der 
+                        Web Applikation liegt bei Ihnen. Sollte sich die Webapplikation als
+                        fehlerhaft herausstellen, liegen die Kosten für notwendigen Service, Reparatur oder Korrektur bei Ihnen
+                        Mit der Nutzung dieser Web Applikation bestätigen Sie, dass Sie die Funktionsweise der Web Applikation, welche 
                         <a onclick="paneControllerModule.showPane(paneControllerModule.panes.seiteSicherPane);">hier</a>
                          angeführt ist, und diese Nutzungsbestimmungen gelesen und verstanden haben.
                     </p>
@@ -198,7 +208,7 @@
                     </div>
                     <div class="detailed-result-box">
                         <div>
-                            <h3>Detailiertes Test Ergebnis:</h3>
+                            <h3>Detailliertes Test Ergebnis:</h3>
                             <ul class="detailed-result-list">
                                 <li><img src="icons/check_ok.svg" alt="X" id="length_status_icon">Länge</li>
                                 <li><img src="icons/check_ok.svg" alt="X" id="letters_status_icon">große und kleine Buchstaben</li>
