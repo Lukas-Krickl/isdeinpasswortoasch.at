@@ -10,7 +10,15 @@ var special_chars_ok;
 var words_ok;
 var not_leaked;
 
-//is executed with onclick to the submit button 
+userInput.addEventListener("keyup", function (event) {
+    // Number 13 is the "Enter" key on the keyboard
+    if (event.code === "Enter") {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        submitPassword();
+    }
+}); 
+
 function submitPassword() {
     let password = userInput.value;
     if ((password.length == 0) || (password.length > 32)) {
