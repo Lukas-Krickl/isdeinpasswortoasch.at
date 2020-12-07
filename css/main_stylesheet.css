@@ -11,8 +11,6 @@ html {
   line-height: 1;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-animation: fade-in .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
-	        animation: fade-in .5s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
 }
 
 body {
@@ -30,8 +28,6 @@ body {
 @media only screen and (max-width: 650px)  {
   html, body, .background-txt {
     height: 120vh;
-    position: fixed;
-    top: 0;
   }
 }
 
