@@ -21,8 +21,15 @@ const dictApiControllerModule = (function () {
             }
         }, requestTimeoutTimer);
 
+        
+
         for (let i = 0; i < words.length; i++) {
             let timeout = 2000*(i);
+
+            if (words.length < 2) {
+                timeout = 1000 + 2000 * i;
+            }
+
             setTimeout(function () {
                 requestWordCheck('en', words[i]);
             }, timeout);
