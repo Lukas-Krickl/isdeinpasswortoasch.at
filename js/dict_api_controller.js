@@ -14,7 +14,7 @@ const dictApiControllerModule = (function () {
         foundWords = {};
         callbackFunction = callback;
 
-        let requestTimeoutTimer = 15000 + (words.length * 2000);
+        let requestTimeoutTimer = 10000 + (words.length * 2000);
         setTimeout(function () {
             if (wordSearchComplete < words.length*2){
                 callbackFunction(wordFound);
@@ -31,13 +31,17 @@ const dictApiControllerModule = (function () {
                 requestWordCheck('de', words[i]);
             }, timeout+1000); 
         }
+        if (words.length == 0) {
+            callbackFunction(wordFound);
+        }
     }
 
     function extractWords(password) {
         const wordRecognitionRegex = /[a-z]{4,}/gi;
 
         let possible_words = password.match(wordRecognitionRegex); //split into all contiguous letters
-        if (possible_words == null) {
+        if (!possible_words) {
+            console.log("no words found");
             return [];
         }
         
@@ -97,11 +101,15 @@ const dictApiControllerModule = (function () {
     }
 
     function printFoundWordsToConsole() {
-        console.clear();
-        console.log("Found Words:");
-        for (word in foundWords) {
-            console.log(word +": "+foundWords[word]);
-        }
+        setTimeout(function () {
+            console.clear();
+            console.log("words searched: " + words);
+            console.log("Found Words:");
+            for (word in foundWords) {
+                console.log(word + ": " + foundWords[word]);
+            }
+        }, 1000);
+        
     }
 
 

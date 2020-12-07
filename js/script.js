@@ -12,8 +12,11 @@ var not_leaked;
 
 //is executed with onclick to the submit button 
 function submitPassword() {
-    paneControllerModule.toggleProgressbar(true);
     let password = userInput.value;
+    if ((password.length == 0) || (password.length > 32)) {
+        return;
+    }
+    paneControllerModule.toggleProgressbar(true);
     setDefaultValues();
     password_length = password.length;
     length_ok = passwordChecker.checkLength(password);

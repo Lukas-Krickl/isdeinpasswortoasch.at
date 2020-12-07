@@ -46,8 +46,8 @@
             </div>
         </div>
         <div class="full-screen-pane hidden" id="improvement_pane">
-            <div class="improvement-pane-wrapper">
-                <button class="pane-close-btn improvement-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.improvementPane);">
+            <div class="pane-wrapper">
+                <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.improvementPane);">
                     <img src="icons/clear-24px.svg" alt="X"></button>
                 <div class="pane">
                     <h3>So wählen sie ein sicheres Passwort:</h3>
@@ -83,137 +83,145 @@
             </div>
         </div>
         <div class="full-screen-pane hidden" id="seite_sicher_pane">
-            <div class="full-screen-pane-content">
-                <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.seiteSicherPane);">
-                    <img src="icons/clear-24px.svg" alt="X"></button>
-                <h3>Ist diese Seite sicher?</h3>
-                
-                <p>
-                    Um Ihre Eingabe auf anfälligkeit des 2. Angriffes unter "Wie wir Ihr Passwort Testen." zu Prüfen senden wir sie als Ganzen und in Teilen zur Abfrage an folgendes online Wörterbuch über eine verschlüsselte Verbindung.
-                    <a href="https://dictionaryapi.dev/" target="blank">https://dictionaryapi.dev/</a><br><br>
-                    Um Ihre Eingabe auf anfälligkeit des 3. Angriffes unter "Wie wir Ihr Passwort Testen." zu Prüfen senden wir sie
-                        an eine API folgender Plattform über eine verschlüsselte Verbindung.
-                    <a href="https://haveibeenpwned.com/" target="blank">https://haveibeenpwned.com/</a>
-                    <hr>
-                    Geben Sie auf KEINER anderen Webseite, als der zugehörigen und offiziellen Seite Ihrer Accounts Benutzername und/oder Passwort ein! Dies gilt auch für diese Seite.
-                    <br><br>
-                    Sie könnten Ziel eines "Phishing Attack" werden. Mehr über "Phishing Attacks" und wie man sich gegen Sie wehrt erfahren Sie hier: 
-                    <a href="https://lukas-krickl.github.io/Phishing-Resistance" target="blank">Phishing Resistance</a>
-                    <br><br>
-                    Diese Seite verwendet "state of the art" Sicherheitsmechanismen, außerdem werden Ihre Eingaben nicht gespeichert. Sie können daher
-                    in eigenem Ermessen Passwörter eingeben.
-                    <br><br>
-                </p>
-                <strong>Geben Sie vorzugsweise Passwörter ein, die demselben Schema wie Ihr Echtes folgen:</strong>
-                <ul>
-                    <li>Gleiche Länge</li>
-                    <li>Gleiche Anzahl von Buchstaben, Zahlen, Sonderzeichen</li>
-                    <li>Gleiche Anzahl von Wörtern, Name</li>
-                </ul>
+            <div class="pane-wrapper">
+                <div class="full-screen-pane-content">
+                    <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.seiteSicherPane);">
+                        <img src="icons/clear-24px.svg" alt="X"></button>
+                    <h3>Ist diese Seite sicher?</h3>
+                    
+                    <p>
+                        Um Ihre Eingabe auf anfälligkeit des 2. Angriffes unter "Wie wir Ihr Passwort Testen." zu Prüfen senden wir sie als Ganzen und in Teilen zur Abfrage an folgendes online Wörterbuch über eine verschlüsselte Verbindung.
+                        <a href="https://dictionaryapi.dev/" target="blank">https://dictionaryapi.dev/</a><br><br>
+                        Um Ihre Eingabe auf anfälligkeit des 3. Angriffes unter "Wie wir Ihr Passwort Testen." zu Prüfen senden wir sie
+                            an eine API folgender Plattform über eine verschlüsselte Verbindung.
+                        <a href="https://haveibeenpwned.com/" target="blank">https://haveibeenpwned.com/</a>
+                        <hr>
+                        Geben Sie auf KEINER anderen Webseite, als der zugehörigen und offiziellen Seite Ihrer Accounts Benutzername und/oder Passwort ein! Dies gilt auch für diese Seite.
+                        <br><br>
+                        Sie könnten Ziel eines "Phishing Attack" werden. Mehr über "Phishing Attacks" und wie man sich gegen Sie wehrt erfahren Sie hier: 
+                        <a href="https://lukas-krickl.github.io/Phishing-Resistance" target="blank">Phishing Resistance</a>
+                        <br><br>
+                        Diese Seite verwendet "state of the art" Sicherheitsmechanismen, außerdem werden Ihre Eingaben nicht gespeichert. Sie können daher
+                        in eigenem Ermessen Passwörter eingeben.
+                        <br><br>
+                    </p>
+                    <strong>Geben Sie vorzugsweise Passwörter ein, die demselben Schema wie Ihr Echtes folgen:</strong>
+                    <ul>
+                        <li>Gleiche Länge</li>
+                        <li>Gleiche Anzahl von Buchstaben, Zahlen, Sonderzeichen</li>
+                        <li>Gleiche Anzahl von Wörtern, Name</li>
+                    </ul>
+                </div>
             </div>
         </div>
         <!--  -->
         <div class="full-screen-pane hidden" id="what_we_test_pane">
-            <div class="full-screen-pane-content">
-                <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.what_we_test_pane);">
-                    <img src="icons/clear-24px.svg" alt="X"></button>
-                <h3>Wie wir Ihr Passwort Testen:</h3>
-                <ol>
-                    <li>
-                        <strong>die Komplexität Ihres Passwortes.</strong><br>
-                        Resistenz gegen "bruteforce attacks".
-                    </li>
-                    <li>
-                        <strong>ob Ihr Passwort Deutsche/Englische Wörter enthält</strong><br>
-                        Resistenz gegen "dictionary attacks"
-                    </li>
-                    <li>
-                        <strong>ob Ihr Passwort "geleaked" wurde (in einem Datenleck enthalten war)</strong><br>
-                        Resistenz gegen "dictionary attacks"
-                    </li>
-                </ol>
-
-                <hr>
-                <p>
-                    <strong>Bruteforce Attacks:</strong><br>
-                    Passwörter erhalten ihre stärke durch ihre Komplexität. Komplexität bedeutet hier nicht, wie zufällig 
-                    und kompliziert es aussieht, sondern die Anzahl der Permutationen die durch die verwendeten "Character Sets"/Zeichenarten und der Länge erzeugt werden.
-                    <br><br>
-                    Die einfachste Methode eines Angreifers ist der "bruteforce attack", systematisches Ausprobieren von jeder Zeichenkombination.
-                    Dieser Angriff hat eine 100% Erfolgswahrscheinlichkeit da er jede mögliche Zeichenkombination/Permutation ausprobiert, bis unser Passwort gefunden wurde. Wehren kann man sich mit einer hohen Anzahl von Permutationen, sodass der Angriff lange dauert, und in dem man seine Passwörter regelmäßig ändert, bevor der Angriff abgeschlossen ist.                         
-                </p>
-                <hr>
-                <p>
-                    <strong>Dictionary Attack:</strong><br>
-                    Ähnlich dem bruteforce attack nur probiert der Angreifer hier eine Kombination aus Wörtern eines Wörterbuches.
-                    Dieses Wörterbuch kann ein gewöhnliches Wöterbuch einer Sprache sein, aber auch eine Liste von häufig gewählten Passwörtern 
-                    oder sogar Passwörter die durch ein Datenleck veröffentlicht wurden. Verwenden Sie daher kein Passwort mehrmals.
-                    
-                </p>   
-            </div>
+            <div class="pane-wrapper">
+                <div class="full-screen-pane-content">
+                    <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.what_we_test_pane);">
+                        <img src="icons/clear-24px.svg" alt="X"></button>
+                    <h3>Wie wir Ihr Passwort Testen:</h3>
+                    <ol>
+                        <li>
+                            <strong>die Komplexität Ihres Passwortes.</strong><br>
+                            Resistenz gegen "bruteforce attacks".
+                        </li>
+                        <li>
+                            <strong>ob Ihr Passwort Deutsche/Englische Wörter enthält</strong><br>
+                            Resistenz gegen "dictionary attacks"
+                        </li>
+                        <li>
+                            <strong>ob Ihr Passwort "geleaked" wurde (in einem Datenleck enthalten war)</strong><br>
+                            Resistenz gegen "dictionary attacks"
+                        </li>
+                    </ol>
     
+                    <hr>
+                    <p>
+                        <strong>Bruteforce Attacks:</strong><br>
+                        Passwörter erhalten ihre stärke durch ihre Komplexität. Komplexität bedeutet hier nicht, wie zufällig 
+                        und kompliziert es aussieht, sondern die Anzahl der Permutationen die durch die verwendeten "Character Sets"/Zeichenarten und der Länge erzeugt werden.
+                        <br><br>
+                        Die einfachste Methode eines Angreifers ist der "bruteforce attack", systematisches Ausprobieren von jeder Zeichenkombination.
+                        Dieser Angriff hat eine 100% Erfolgswahrscheinlichkeit da er jede mögliche Zeichenkombination/Permutation ausprobiert, bis unser Passwort gefunden wurde. Wehren kann man sich mit einer hohen Anzahl von Permutationen, sodass der Angriff lange dauert, und in dem man seine Passwörter regelmäßig ändert, bevor der Angriff abgeschlossen ist.                         
+                    </p>
+                    <hr>
+                    <p>
+                        <strong>Dictionary Attack:</strong><br>
+                        Ähnlich dem bruteforce attack nur probiert der Angreifer hier eine Kombination aus Wörtern eines Wörterbuches.
+                        Dieses Wörterbuch kann ein gewöhnliches Wöterbuch einer Sprache sein, aber auch eine Liste von häufig gewählten Passwörtern 
+                        oder sogar Passwörter die durch ein Datenleck veröffentlicht wurden. Verwenden Sie daher kein Passwort mehrmals.
+                        
+                    </p>   
+                </div>
+            </div>
         </div>
         <div class="full-screen-pane hidden" id="impressum_pane">
-            <div class="full-screen-pane-content impressum-content">
-                <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.impressumPane);">
-                    <img src="icons/clear-24px.svg" alt="X"></button>
-                <h3>Impressum</h3>
-                <h4 class="titel-impressum">is dein passwort oasch .at</h4>
-                <h4>Autor:</h4>
-                <p>
-                    Lukas Krickl<br><br>
-                    <a href="https://lukas-krickl.github.io" target="blank">https://lukas-krickl.github.io</a><br>
-                    lukas.krickl@outlook.at<br>
-                    Wien
-
-
-                </p>
-                <h4>Nutzungsbedingungen:</h4>
-                <p class="paragraph-block">
-                    In den Nutzungsbedingungen sind der Autor im folgenden mit "ich", diese Website mit "Web Applikation" und der Nutzer mit "Sie" bezeichnet.
-                    Diese Web Applikation wurde ausschließlich zu Lernzwecken bezüglich "serverless computing" und demonstration meiner Fertigkeiten als Software-engineer als Teil meines <a href="https://lukas-krickl.github.io" target="blank">Portfolios</a> entwickelt.<br><br> 
-                    Ich übernehme keinerlei Haftung für die eingegebenen Daten, deren Handhabung, inklussive Weiterleitung an dritte als Ganzes oder in Teilen,
-                    was für die technologische Funktionsweise erforderlich ist.  
-                    Des weiteren geben gebe ich keinerlei Garantie oder Gewährleistung bezüglich der Sicherheit von getesteten Passwörtern und Eingaben
-                    oder Korrektheit der angeführten Passwortsicherheit-spezifischen Information.
-                    Mit der Nutzung dieser Web Wpplikation bestätigen Sie, dass Sie die funktionsweise der Web Applikation, welche 
-                    <a onclick="paneControllerModule.showPane(paneControllerModule.panes.seiteSicherPane);">hier</a>
-                     angeführt ist, und diese Nutzungsbestimmungen gelesen und verstanden haben.
-                </p>
+            <div class="pane-wrapper">
+                <div class="full-screen-pane-content impressum-content">
+                    <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.impressumPane);">
+                        <img src="icons/clear-24px.svg" alt="X"></button>
+                    <h3>Impressum</h3>
+                    <h4 class="titel-impressum">is dein passwort oasch .at</h4>
+                    <h4>Autor:</h4>
+                    <p>
+                        Lukas Krickl<br><br>
+                        <a href="https://lukas-krickl.github.io" target="blank">https://lukas-krickl.github.io</a><br>
+                        lukas.krickl@outlook.at<br>
+                        Wien
+    
+    
+                    </p>
+                    <h4>Nutzungsbedingungen:</h4>
+                    <p class="paragraph-block">
+                        In den Nutzungsbedingungen sind der Autor im folgenden mit "ich", diese Website mit "Web Applikation" und der Nutzer mit "Sie" bezeichnet.
+                        Diese Web Applikation wurde ausschließlich zu Lernzwecken bezüglich "serverless computing" und demonstration meiner Fertigkeiten als Software-engineer als Teil meines <a href="https://lukas-krickl.github.io" target="blank">Portfolios</a> entwickelt.<br><br> 
+                        Ich übernehme keinerlei Haftung für die eingegebenen Daten, deren Handhabung, inklussive Weiterleitung an dritte als Ganzes oder in Teilen,
+                        was für die technologische Funktionsweise erforderlich ist.  
+                        Des weiteren geben gebe ich keinerlei Garantie oder Gewährleistung bezüglich der Sicherheit von getesteten Passwörtern und Eingaben
+                        oder Korrektheit der angeführten Passwortsicherheit-spezifischen Information.
+                        Mit der Nutzung dieser Web Wpplikation bestätigen Sie, dass Sie die funktionsweise der Web Applikation, welche 
+                        <a onclick="paneControllerModule.showPane(paneControllerModule.panes.seiteSicherPane);">hier</a>
+                         angeführt ist, und diese Nutzungsbestimmungen gelesen und verstanden haben.
+                    </p>
+                </div>
             </div>
         </div>
         <div class="full-screen-pane hidden" id="result_pane">
             <div class="full-screen-pane-content result-screen">
-                <button class="pane-close-btn" id="result_close"><img src="icons/clear-24px.svg" alt="X"></button>
-                <div class="check-result-box">
-                    <h2>Sicherheits-Check Ergebnis</h2>
-                    <img src="icons/strong-password.svg" id="result_icon" alt="" height="40px">
-                    <h4 id="result_text"></h4>
-                    <button id="improvement_btn2">So stärken Sie Ihr Passwort</button>
-                </div>
-                <div class="detailed-result-box">
-                    <div>
-                        <h3>Detailiertes Test Ergebnis:</h3>
-                        <ul class="detailed-result-list">
-                            <li><img src="icons/check_ok.svg" alt="X" id="length_status_icon">Länge</li>
-                            <li><img src="icons/check_ok.svg" alt="X" id="letters_status_icon">große und kleine Buchstaben</li>
-                            <li><img src="icons/check_ok.svg" alt="X" id="numeric_status_icon">Zahlen</li>
-                            <li><img src="icons/check_ok.svg" alt="X" id="special_chars_status_icon">Sonderzeichen</li>
-                            <li><img src="icons/check_ok.svg" alt="X" id="words_status_icon"><span id="words_status_text">Enthällt keine Wörter eines Wörterbuches</span></li>
-                            <li><img src="icons/check_ok.svg" alt="X" id="leaked_status_icon"><span id="leaked_status_text"></span></li>
-                        </ul>
+                <div class="result-content">
+                    <div class="check-result-box">
+                        <h2>Sicherheits-Check Ergebnis</h2>
+                        <img src="icons/strong-password.svg" id="result_icon" alt="" height="40px">
+                        <h4 id="result_text"></h4>
+                        <button class="link-btn" onclick="paneControllerModule.showPane(paneControllerModule.panes.improvementPane);">So stärken Sie Ihr Passwort</a>
+                    </div>
+                    <div class="detailed-result-box">
+                        <div>
+                            <h3>Detailiertes Test Ergebnis:</h3>
+                            <ul class="detailed-result-list">
+                                <li><img src="icons/check_ok.svg" alt="X" id="length_status_icon">Länge</li>
+                                <li><img src="icons/check_ok.svg" alt="X" id="letters_status_icon">große und kleine Buchstaben</li>
+                                <li><img src="icons/check_ok.svg" alt="X" id="numeric_status_icon">Zahlen</li>
+                                <li><img src="icons/check_ok.svg" alt="X" id="special_chars_status_icon">Sonderzeichen</li>
+                                <li><img src="icons/check_ok.svg" alt="X" id="words_status_icon"><span id="words_status_text">Enthällt keine Wörter eines Wörterbuches</span></li>
+                                <li><img src="icons/check_ok.svg" alt="X" id="leaked_status_icon"><span id="leaked_status_text">Wurde nicht geleaked</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="repeat_check_btn_wrapper">
-                    <button class="btn field field-high field-blue" id="repeat_check_btn">Check Wiederholen</button>
+                    <button class="btn field field-high field-blue" id="repeat_check_btn">Fortfahren</button>
                 </div>
             </div>
         </div>
         <div class="full-screen-pane hidden" id="error_pane">
-            <div class="full-screen-pane-content">
-                <button class="pane-close-btn" id="error_close"><img src="icons/clear-24px.svg" alt="X"></button>
-                <h3>Hier hat etwas nicht funktioniert.</h3>
-                <p id="error_msg">Versuchen Sie es später erneut.</p>
+            <div class="pane-wrapper">
+                <div class="full-screen-pane-content">
+                    <button class="pane-close-btn" id="error_close"><img src="icons/clear-24px.svg" alt="X"></button>
+                    <h3>Hier hat etwas nicht funktioniert.</h3>
+                    <p id="error_msg">Versuchen Sie es später erneut.</p>
+                </div>
             </div>
         </div>
         <div class="background-txt">cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83fefb8bde9ce47d0d13c5d3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f12838c4f1282b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b0436372744543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912ecf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f1281bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f128954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f128d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c12cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f12838c4f1282b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff9f1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912ecf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f1281bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f128954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f128d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c12cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f12838c4f1282b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b0436372744543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912ecf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858d000a66ba25157bbd29ad63fb0cb17c04984fa3e9400e6fbc20a9cff93b375525106be9cf8807bec2c214afa2d64514c9c63889e6de92e9cfe02b7ffcd86f592b8f103af760eed73bdaec1086efe0821a19efb3bf3651d41450fde99373b04363727473d00ae938a4f4debfd0afb1d428337d81905f6863b3cc303bb331ffb3361085c3a6a2ef4589ff9cd2014c90ce90010cd3805fa5fbc6adac93e7c7fce808234dea4a6be61d8fcd50c5c1238c4f128cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948954c9183ac9122f7cad6c1e38ffb52125d46fe1c11f5d1ebeeef7f0e02606ea5cd169633d58ba2c97302785ea6dcd388a7ea2600a9ec4525d5baac6665dc5bae395bafc4b4f19bdf163015842cc76ff37034b243bb52d2ec64b6319c15d70f1d0d7bd1cb3e1a63ea6892fdbfb78f050a35ce84ad9f07d2fc344973220b8462b6849df66c63d1aa241e2ae1d1a8e44eb7476a729d3244ead449f8c63f74bc858cf83e1357eefb8bdf1542850d66d8007d620e4050b5715dc83f4a921d36ce9ce47d0d13c5d85f2b0ff8318d2877eec2f63b931bd47417a81a538327af9274286a3ff4b664897a4c27af5009e2fdc72ee7dd3795cacdaa8888912e1bfcdfd9c6d6aed365915f8c22fd8704543482a44b0d6d5e47fb34ec48ffc05916bb921da3ed8d98397c83c16d59598b66daf16154674cf5a05b9c29155dabd82792df4841483608d4f065e29d3e0726deabeae948cf83e</div>

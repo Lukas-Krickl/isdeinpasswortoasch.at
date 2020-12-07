@@ -38,7 +38,6 @@ const paneControllerModule = (function () {
 
     //chech if terms of use accepted and hide pane if so
     const sessionStore = window.sessionStorage;
-    console.log("session store is "+sessionStore.getItem("termsOfUseAccepted"));
     if (sessionStore.getItem("termsOfUseAccepted") !== "accepted") {
         showPane(panes.termsOfUsePane);
     }
@@ -46,16 +45,11 @@ const paneControllerModule = (function () {
     //when terms of use are accepted save state until browser is closed
     function acceptTermsOfUse() {
         sessionStore.setItem("termsOfUseAccepted", "accepted");
-        console.log("session set to "+sessionStore.getItem("termsOfUseAccepted"));
         hidePane(panes.termsOfUsePane);
     }
     
 
     //eventlisteners
-
-    document.getElementById("result_close").addEventListener("click", function () {
-        hidePane(resultPane);
-    });
 
     document.getElementById("repeat_check_btn").addEventListener("click", function () {
         hidePane(resultPane);
