@@ -4,6 +4,8 @@
 }
 
 html {
+  position: fixed;
+  bottom: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
@@ -104,6 +106,7 @@ p {
   overflow: hidden;
   word-wrap: break-word;
   font-size: 18px;
+
   font-family: 'Rasa', serif;
 }
 
@@ -142,9 +145,8 @@ main {
   background: radial-gradient(70% 76.68% at 50% 50%, #F5F5F5 43.23%, rgba(238, 238, 238, 0) 88.54%);
   position: fixed;
   z-index: 10;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   overflow: hidden;
