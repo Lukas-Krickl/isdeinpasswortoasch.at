@@ -10,6 +10,7 @@ var special_chars_ok;
 var words_ok;
 var not_leaked;
 
+
 userInput.addEventListener("keyup", function (event) {
     // Number 13 is the "Enter" key on the keyboard
     if (event.code === "Enter") {
