@@ -2,6 +2,7 @@
 const paneControllerModule = (function () {
     const panes = {
         termsOfUsePane: document.getElementById("terms_of_use_pane"),
+        warning: document.getElementById("warning"),
         improvementPane: document.getElementById("improvement_pane"),
         seiteSicherPane: document.getElementById("seite_sicher_pane"),
         what_we_test_pane: document.getElementById("what_we_test_pane"),

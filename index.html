@@ -53,6 +53,22 @@
                 <button class="btn field field-high" onclick="paneControllerModule.acceptTermsOfUse();">Gelesen und verstanden.</button>
             </div>
         </div>
+        <div class="full-screen-pane" id="warning">
+            <div class="pane-wrapper">
+                <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.warning);">
+                    <img src="icons/clear-24px.svg" alt="X"></button>
+                <div class="pane">
+                    <h3>GEBEN SIE KEINES IHRER ECHTEN PASSWÖRTER EIN!</h3>
+                    <p>Prüfen Sie stattdessen ein neues Passwort, welches in seiner Komplexität Ihren üblichen Passwörtern entspricht, 
+                        aber nicht verwendet wird. <br><br>Diese Seite soll Ihnen helfen, ein Gefühl für Passwortsicherheit zu entwickeln,
+                        um zukünftig stärkere Passwörter wählen zu können.
+                    </p>
+                    <div class="waring-btn-centered">
+                        <button class="btn field-blue field field-high" onclick="paneControllerModule.hidePane(paneControllerModule.panes.warning);">Verstanden</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="full-screen-pane hidden" id="improvement_pane">
             <div class="pane-wrapper">
                 <button class="pane-close-btn" onclick="paneControllerModule.hidePane(paneControllerModule.panes.improvementPane);">
